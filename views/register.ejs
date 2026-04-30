@@ -1,0 +1,11 @@
+<% layout('layout') %>
+<form action="/register" method="POST" class="needs-validation" novalidate>
+  <input name="username" placeholder="Username" required>
+  <input name="password" type="password"  placeholder="Password"required>
+  <input name="age" type="number"  placeholder="Age" required>
+  <input name="phoneNumber"  placeholder="Phone No." required>
+  <input name="gender"  placeholder="Gender" required>
+  <input type="checkbox" name="isLegal" required> Legal
+
+  <button>Register</button>
+</form>

@@ -1,0 +1,22 @@
+<% layout('layout') %>
+<h2>All Guns</h2>
+
+<form action="/guns" method="POST">
+  <input name="gunName" placeholder="Gun Name">
+  <input name="price" placeholder="Price" required>
+  <label>Automatic</label>
+  <input type="checkbox" name="automatic">
+  <button>Add</button>
+</form>
+
+<ul>
+  <% guns.forEach(g => { %>
+    <li>
+      <a href="/guns/<%= g._id %>"><%= g.gunName %></a>
+
+      <form action="/guns/<%= g._id %>/delete" method="POST">
+        <button>Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
