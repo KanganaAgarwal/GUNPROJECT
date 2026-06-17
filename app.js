@@ -6,7 +6,7 @@ const LocalStrategy = require('passport-local');
 const ejsMate = require('ejs-mate');
 
 const User = require('./models/User');
-
+ 
 const app = express();
 
 mongoose.connect('mongodb://127.0.0.1:27017/gunDB');
